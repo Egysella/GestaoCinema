@@ -1,0 +1,232 @@
+/* Global Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    min-height: 100vh; /* Allow content height to exceed viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+
+
+/* Main Content Container */
+div {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap; /* Ensure elements can wrap onto the next line if needed */
+    padding-top: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 15px;
+    width: 45%; /* Adjust width so sections fit side by side */
+    background: #fdfefe;
+    border: 2px solid #0e2b26;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input Fields */
+input, select, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #00ffcc;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #009e99;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 100%; /* Make sections full-width on smaller screens */
+    }
+}
+/* Global Styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #f1e1e6, #f5d0a9, #e2d0ec);
+    color: #3e3e3e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Header */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px auto;
+    width: 90%;
+}
+li {
+    display: flex;          /* Display items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center;     /* Align items vertically */
+    margin: 10px;            /* Space between list items */
+    padding: 0;
+    text-align: center;
+}
+
+li > * {
+    margin-right: 10px;      /* Space between elements inside the <li> */
+}
+
+li > *:last-child {
+    margin-right: 0;         /* Remove the right margin for the last element */
+}
+
+/* Main Content Container */
+div {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 15px;
+    width: 45%;
+    background: #f4f1f7;
+    border: 2px solid #f7d0b9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input Fields */
+input, select, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #e0d7d7;
+}
+
+button {
+    background-color: #c1c6f7;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a1a8e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 100%;
+    }
+}
+
+/* Cube Container */
+#cube-container {
+    perspective: 1000px;
+    width: 100px; /* Increase size for better visibility */
+    height: 100px;
+    margin-left: 10px;
+}
+
+#cube {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: spin 5s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100px; /* Adjusted size for better proportion */
+    height: 100px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+/* Cube Faces */
+.face:nth-child(1) { transform: rotateY(0deg) translateZ(50px); background: #ffb3b3; }
+.face:nth-child(2) { transform: rotateY(90deg) translateZ(50px); background: #ffcccb; }
+.face:nth-child(3) { transform: rotateY(180deg) translateZ(50px); background: #f0e6f7; }
+.face:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); background: #b3c6ff; }
+.face:nth-child(5) { transform: rotateX(90deg) translateZ(50px); background: #d1e7f7; }
+.face:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); background: #d8f7d1; }
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
